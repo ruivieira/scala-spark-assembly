@@ -1,5 +1,6 @@
 package com.example
 
+import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.rdd.RDD
 
 object Main {
