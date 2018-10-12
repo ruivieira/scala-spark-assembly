@@ -4,6 +4,7 @@
 lazy val root = (project in file(".")).
   settings(
     name := "scala-spark-assembly.g8",
+    scalaVersion := "2.11.12",
     test in Test := {
       val _ = (g8Test in Test).toTask("").value
     },
