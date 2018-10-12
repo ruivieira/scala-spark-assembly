@@ -1,9 +1,11 @@
 // This build is for this Giter8 template.
 // To test the template run `g8` or `g8Test` from the sbt session.
 // See http://www.foundweekends.org/giter8/testing.html#Using+the+Giter8Plugin for more details.
-lazy val root = (project in file(".")).
-  settings(
+lazy val root = (project in file("."))
+  .settings(
+    sbtPlugin := true,
     name := "scala-spark-assembly.g8",
+    version := "0.1-SNAPSHOT",
     scalaVersion := "2.11.12",
     test in Test := {
       val _ = (g8Test in Test).toTask("").value
